@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>SignalGuru — Monthly Allocation</title>
+<style>
+  :root{
+    --bg:#0d1117; --panel:#161b22; --line:#26303d; --ink:#e6edf3; --dim:#8b949e;
+    --accent:#58a6ff; --pos:#3fb950; --neg:#f85149; --warn:#d29922;
+  }
+  @media (prefers-color-scheme: light){
+    :root{ --bg:#f6f8fa; --panel:#fff; --line:#d8dee4; --ink:#1f2328; --dim:#636c76;
+           --accent:#0969da; --pos:#1a7f37; --neg:#cf222e; --warn:#9a6700; }
+  }
+  *{box-sizing:border-box}
+  body{margin:0;padding-block:32px 64px;padding-inline:20px;background:var(--bg);color:var(--ink);
+       font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+  .wrap{max-width:860px;margin:0 auto;display:flex;flex-direction:column;gap:28px}
+  header{border-bottom:2px solid var(--line);padding-bottom:20px}
+  h1{margin:0 0 4px;font-size:clamp(26px,5vw,36px);letter-spacing:-.02em}
+  .sub{color:var(--dim);font-size:15px;margin:0}
+  .hold{display:inline-block;margin-top:14px;padding:6px 14px;border:1px solid var(--accent);
+        color:var(--accent);border-radius:999px;font-size:14px;font-weight:600}
+  h2{font-size:19px;margin:0 0 10px;letter-spacing:-.01em}
+  .panel{background:var(--panel);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+  table{width:100%;border-collapse:collapse;font-size:15px}
+  th{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--dim);
+     text-align:right;padding:12px 14px;border-bottom:1px solid var(--line);font-weight:600}
+  th:first-child,td:first-child{text-align:left}
+  td{padding:11px 14px;border-bottom:1px solid var(--line);text-align:right;
+     font-variant-numeric:tabular-nums}
+  tr:last-child td{border-bottom:0}
+  .tkr{font-weight:700;letter-spacing:.01em}
+  .nm{color:var(--dim);font-size:13px;display:block;font-weight:400;letter-spacing:0}
+  .w{font-weight:700;font-size:16px}
+  .pos{color:var(--pos)} .neg{color:var(--neg)} .dim{color:var(--dim)}
+  .tag{font-size:11px;font-weight:700;letter-spacing:.06em;padding:3px 8px;border-radius:4px;
+       border:1px solid currentColor}
+  .buy{color:var(--pos)} .sell{color:var(--neg)} .hold-t{color:var(--dim)}
+  tr.exited td:first-child .tkr{opacity:.55}
+  .def td:first-child .tkr::after{content:" · defensive";font-size:10px;color:var(--warn);
+       letter-spacing:.06em;font-weight:600}
+  tfoot td{font-weight:700;border-top:2px solid var(--line);border-bottom:0}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1px;
+        background:var(--line);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+  .cell{background:var(--panel);padding:14px 16px}
+  .cell .v{font-size:24px;font-weight:700;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+  .cell .k{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--dim)}
+  .note{color:var(--dim);font-size:14px}
+  footer{border-top:1px solid var(--line);padding-top:18px;color:var(--dim);font-size:13px;
+         display:flex;flex-direction:column;gap:10px}
+  footer strong{color:var(--ink)}
+  @media (max-width:560px){ .hide-s{display:none} td,th{padding:10px 9px} }
+</style>
+</head><body>
+<div class="wrap">
+
+  <header>
+    <h1>SignalGuru</h1>
+    <p class="sub">A proprietary monthly tactical allocation model. Positions are reviewed once
+      per month and held until the next review.</p>
+    <span class="hold">Holdings for September 2026</span>
+  </header>
+
+  <section>
+    <h2>Allocation</h2>
+    <div class="panel">
+      <table>
+        <thead>
+          <tr><th>Holding</th><th>Weight</th><th class="hide-s">Change</th><th>Action</th></tr>
+        </thead>
+        <tbody>
+          
+          <tr class="">
+            <td><span class="tkr">XLE</span><span class="nm">Energy</span></td>
+            <td class="w">30.31%</td>
+            <td class="hide-s dim">
+              &mdash;</td>
+            <td><span class="tag hold-t">HOLD</span></td>
+          </tr>
+          
+          <tr class="">
+            <td><span class="tkr">QQQM</span><span class="nm">US large-cap growth</span></td>
+            <td class="w">17.50%</td>
+            <td class="hide-s dim">
+              &mdash;</td>
+            <td><span class="tag hold-t">HOLD</span></td>
+          </tr>
+          
+          <tr class="">
+            <td><span class="tkr">SMH</span><span class="nm">Semiconductors</span></td>
+            <td class="w">17.50%</td>
+            <td class="hide-s dim">
+              &mdash;</td>
+            <td><span class="tag hold-t">HOLD</span></td>
+          </tr>
+          
+          <tr class="def ">
+            <td><span class="tkr">JAAA</span><span class="nm">AAA-rated floating-rate credit</span></td>
+            <td class="w">8.75%</td>
+            <td class="hide-s pos">
+              +8.8 pp</td>
+            <td><span class="tag buy">BUY</span></td>
+          </tr>
+          
+          <tr class="">
+            <td><span class="tkr">AVIV</span><span class="nm">International value</span></td>
+            <td class="w">8.75%</td>
+            <td class="hide-s dim">
+              &mdash;</td>
+            <td><span class="tag hold-t">HOLD</span></td>
+          </tr>
+          
+          <tr class="">
+            <td><span class="tkr">AVUV</span><span class="nm">US small-cap value</span></td>
+            <td class="w">8.75%</td>
+            <td class="hide-s dim">
+              &mdash;</td>
+            <td><span class="tag hold-t">HOLD</span></td>
+          </tr>
+          
+          <tr class="">
+            <td><span class="tkr">AVDV</span><span class="nm">International small-cap value</span></td>
+            <td class="w">8.44%</td>
+            <td class="hide-s dim">
+              &mdash;</td>
+            <td><span class="tag hold-t">HOLD</span></td>
+          </tr>
+          
+          <tr class="def exited">
+            <td><span class="tkr">TLT</span><span class="nm">Long-term Treasuries</span></td>
+            <td class="w"><span class="dim">&mdash;</span></td>
+            <td class="hide-s neg">
+              -8.8 pp</td>
+            <td><span class="tag sell">SELL</span></td>
+          </tr>
+          
+        </tbody>
+        <tfoot>
+          <tr><td>Total</td><td>100.00%</td><td class="hide-s"></td><td></td></tr>
+        </tfoot>
+      </table>
+    </div>
+    <p class="note" style="margin-top:10px">Weights are the model's target for the month, shown
+      per holding. <strong>Change</strong> is the move against last month in percentage points,
+      shown where it is material. <strong>Action</strong> compares this month's model to last
+      month's — it is not advice and not a transaction record.</p>
+  </section>
+
+  <section>
+    <h2>Positioning</h2>
+    <div class="grid">
+      <div class="cell"><div class="v">91.2%</div>
+        <div class="k">Growth assets</div></div>
+      <div class="cell"><div class="v">8.8%</div>
+        <div class="k">Defensive</div></div>
+      <div class="cell"><div class="v pos">+40.84%</div>
+        <div class="k">Trailing 12 months</div></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Recent monthly results</h2>
+    <div class="panel">
+      <table>
+        <thead><tr><th>Month</th><th>Model return</th></tr></thead>
+        <tbody>
+          
+          <tr><td>Aug 2026</td>
+              <td class="pos">+4.38%</td></tr>
+          
+          <tr><td>Jul 2026</td>
+              <td class="neg">-0.35%</td></tr>
+          
+          <tr><td>Jun 2026</td>
+              <td class="neg">-0.47%</td></tr>
+          
+          <tr><td>May 2026</td>
+              <td class="pos">+5.08%</td></tr>
+          
+          <tr><td>Apr 2026</td>
+              <td class="pos">+6.05%</td></tr>
+          
+          <tr><td>Mar 2026</td>
+              <td class="neg">-4.23%</td></tr>
+          
+          <tr><td>Feb 2026</td>
+              <td class="pos">+3.20%</td></tr>
+          
+          <tr><td>Jan 2026</td>
+              <td class="pos">+7.25%</td></tr>
+          
+          <tr><td>Dec 2025</td>
+              <td class="pos">+1.72%</td></tr>
+          
+          <tr><td>Nov 2025</td>
+              <td class="pos">+0.80%</td></tr>
+          
+          <tr><td>Oct 2025</td>
+              <td class="pos">+4.67%</td></tr>
+          
+          <tr><td>Sep 2025</td>
+              <td class="pos">+7.33%</td></tr>
+          
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <footer>
+    <p><strong>Not investment advice.</strong> This page is a record of one proprietary model's
+      own positioning. It is not a recommendation, not an offer or solicitation, and not
+      personalised advice. No representation is made that anyone has held, will hold, or should
+      hold these positions.</p>
+    <p><strong>Past results do not predict future returns.</strong> Monthly figures shown are the
+      model's own returns, gross of trading costs, spreads, slippage and taxes, which a real
+      account would pay. Any actual portfolio will differ.</p>
+    <p>The model, its rules and its research are proprietary to SignalGuru and are not published
+      here. Signals are generated from the prior month's closing prices and held for one month.</p>
+    <p>Signal month August 2026 · generated 11 September 2026</p>
+  </footer>
+
+</div>
+</body></html>
